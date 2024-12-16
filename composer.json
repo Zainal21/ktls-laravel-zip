@@ -1,13 +1,12 @@
 {
-  "name": "zanysoft/laravel-zip",
-  "description": "laravel-zip is the world's leading zip utility for file compression and backup.",
+  "name": "zainal21/ktls-laravel-zip",
+  "description": "ktls-laravel-zip is the world's leading zip utility for file compression and backup.",
   "license": "MIT",
-  "homepage": "http://www.zanysoft.net",
   "authors": [
     {
-      "name": "Zany Soft",
-      "email": "info@zanysoft.net",
-      "homepage": "http://www.zanysoft.net"
+      "name": "Kataliskreasi.com",
+      "email": "info@kataliskreasi.com",
+      "homepage": "https://kataliskreasi.com"
     }
   ],
   "keywords": [
