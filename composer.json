@@ -12,14 +12,14 @@
   "extra": {
     "laravel": {
       "providers": [
-        "ZanySoft\\Zip\\ZipServiceProvider"
+        "Zainal21\\Zip\\ZipServiceProvider"
       ],
       "aliases": {
-        "Zip": "ZanySoft\\Zip\\ZipFacade"
+        "Zip": "Zainal21\\Zip\\ZipFacade"
       }
     }
   },
-  "homepage": "http://www.zanysoft.co",
+  "homepage": "http://www.kataliskreasi.com",
   "authors": [
     {
       "name": "Zainal21",
@@ -29,7 +29,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "ZanySoft\\Zip\\": "src"
+      "Zainal21\\Zip\\": "src"
     }
   },
   "require": {
