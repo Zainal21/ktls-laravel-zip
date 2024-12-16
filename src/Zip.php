@@ -1,14 +1,14 @@
-<?php namespace ZanySoft\Zip;
+<?php namespace Zainal21\Zip;
 
 use \ZipArchive;
 use \Exception;
 
 /**
- * ZanySoft\Zip - ZipArchive toolbox
+ * Zainal21\Zip - ZipArchive toolbox
  *
  * This class provide methods to handle single zip archive
  *
- * @package     ZanySoft\Zip
+ * @package     Zainal21\Zip
  * @author      ZanySoft <info@zanysoft.co>
  * @license     MIT
  *
@@ -116,7 +116,7 @@ class Zip {
      *
      * @param   string  $zip_file   ZIP file name
      *
-     * @return  \ZanySoft\Zip\Zip
+     * @return  \Zainal21\Zip\Zip
      */
     public static function open($zip_file) {
 
@@ -167,7 +167,7 @@ class Zip {
      * @param   string  $zip_file   ZIP file name
      * @param   bool    $overwrite  overwrite existing file (if any)
      *
-     * @return  \ZanySoft\Zip\Zip
+     * @return  \Zainal21\Zip\Zip
      */
     public static function create($zip_file, $overwrite = false) {
 
@@ -200,7 +200,7 @@ class Zip {
      *
      * @param   string  $mode   [HIDDEN, ZANYSOFT, ALL, NONE]
      *
-     * @return  \ZanySoft\Zip\Zip
+     * @return  \Zainal21\Zip\Zip
      */
     final public function setSkipped($mode) {
 
@@ -230,7 +230,7 @@ class Zip {
      *
      * @param   string  $password
      *
-     * @return  \ZanySoft\Zip\Zip
+     * @return  \Zainal21\Zip\Zip
      */
     final public function setPassword($password) {
 
@@ -256,7 +256,7 @@ class Zip {
      *
      * @param   string  $path
      *
-     * @return  \ZanySoft\Zip\Zip
+     * @return  \Zainal21\Zip\Zip
      */
     final public function setPath($path) {
 
@@ -284,7 +284,7 @@ class Zip {
      *
      * @param   int     $mask
      *
-     * @return  \ZanySoft\Zip\Zip
+     * @return  \Zainal21\Zip\Zip
      */
     final public function setMask($mask) {
 
@@ -317,7 +317,7 @@ class Zip {
      *
      * @param   \ZipArchive     $zip
      *
-     * @return  \ZanySoft\Zip\Zip
+     * @return  \Zainal21\Zip\Zip
      */
     final public function setArchive(ZipArchive $zip) {
 
@@ -397,11 +397,11 @@ class Zip {
         }
 
         if ( !is_writable($destination) ) throw new Exception('Destination path not writable');
-
+        
         if (!is_array($files) && !is_string($files) && !is_null($files)) {
             throw new Exception('Invalid extractable files');
         }
-
+        
 	    $files = is_array($files) ? $files : (is_string($files) ? [$files] : $files);
 
         if($files == null) {
@@ -430,7 +430,7 @@ class Zip {
      * @param   mixed   $file_name_or_array     filename to add or an array of filenames
      * @param   bool    $flatten_root_folder    in case of directory, specify if root folder should be flatten or not
      *
-     * @return  \ZanySoft\Zip\Zip
+     * @return  \Zainal21\Zip\Zip
      */
     public function add($file_name_or_array, $flatten_root_folder = false) {
 
@@ -465,7 +465,7 @@ class Zip {
      *
      * @param   mixed   $file_name_or_array     filename to delete or an array of filenames
      *
-     * @return  \ZanySoft\Zip\Zip
+     * @return  \Zainal21\Zip\Zip
      */
     public function delete($file_name_or_array) {
 
@@ -652,4 +652,5 @@ class Zip {
         else return sprintf('Unknown status %s', $code);
 
     }
+
 }
